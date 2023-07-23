@@ -1,0 +1,176 @@
+#tags{
+    height: fit-content;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    overflow: scroll;
+}
+#topic{
+    background-color: rgb(141, 93, 172);
+    padding: 3px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+#tag{
+    background-color: rgb(141, 93, 172);
+    padding: 3px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+#newusers{
+    overflow: scroll;
+    height: 30vh;
+
+}
+#populartopics{
+    overflow: hidden;
+    height: 30vh;
+}
+#author{
+    margin-left: 3rem;
+}
+#postimage{
+    width: auto;
+    height: 240px;
+    margin-left: 1rem;
+}
+#posttext{
+    line-height: 41px;
+    margin-left: 1rem;
+}
+#posttitle{
+    margin-bottom: 1px;
+    font-size: 24px;
+    line-height: 1.3;
+}
+#post{
+    width: 80vw;
+    height: fit-content;
+    padding-bottom: 28px;
+    margin-left: auto;
+    background-color: rgb(248, 244, 244);
+    background: repeating-linear-gradient(rgb(248, 244, 244), rgb(248, 244, 244) 25px, #0a79ac 26px, #0a79ac 28px);
+    position: absolute;
+    left: 10%;
+    transform: translate(-50%);
+    align-items: column;
+}
+label {
+    background-color: rgb(90, 147, 218);
+    border: 1.5px solid black;
+    color: black;
+    padding: 0.1rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+    width: fit-content;
+}
+label:hover{
+    background-color: rgb(90, 160, 218);
+    cursor: pointer;
+}
+main p{
+    margin-left: 8%;
+    margin-bottom: -10%;
+}
+.thought {
+    margin-left: 10px;
+    resize: none;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: rgb(90, 147, 218);
+    border: 1.5px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit{
+    padding: 5px;
+    background-color: rgb(90, 147, 218);
+    border: 1.5px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: -5%;
+}
+.submit:hover{
+    background-color: rgb(90, 160, 218);
+    cursor: pointer;
+}
+body {
+    background: repeating-linear-gradient(#eeee7d, #eeee7d 25px, #0a79ac 26px, #0a79ac 28px); /* Notebook background */
+    height: 200vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 7%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: red;
+    z-index: 0;
+}
+#newusers{
+    overflow: scroll;
+}
+p{
+    font-size: 18px;
+}
+hr{
+    border-color: black;
+}
+#topstuffs{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+#ts1{
+    height: 40vh;
+    width: 25vw;
+    margin-right: 0;
+    margin-left: 10px;
+    margin-top: 16px;
+    border-radius: 10px;
+    background-color: rgb(116, 172, 224);
+    border: 2px solid black;
+    z-index: 5;
+}
+#ts2{
+    height: 40vh;
+    width: 45vw;
+    margin-left: 0;
+    margin-top: 16px;
+    border-radius: 10px;
+    background-color: rgb(116, 172, 224);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+#ts3{
+    height: 40vh;
+    width: 25vw;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 16px;
+    border-radius: 10px;
+    background-color: rgb(116, 172, 224);
+    border: 2px solid black;
+    z-index: 5;
+}
+#addTag{
+    margin-left: 15px;
+    border: 2px solid black;
+    padding: a lot;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}

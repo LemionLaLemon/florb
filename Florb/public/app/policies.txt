@@ -1,0 +1,20 @@
+Privacy Policy (show on signin)
+When signing up to Florb and its extended services, you must agree to the following terms.
+    1. Accounts may be terminated anytime.
+    2. Passwords are secure. They will not be shared to third parties just asking for it.
+    3. Any user-generated data will be stored.
+    4. We have the right to delete posts that we beleive are inappropriate for the platform.
+    5. Your account may be acessed any time.
+    6. Anything could be deleted if we beleive that you are violating our link[content policy].
+    7. Any information you have generated may be used against you in arguments.
+    8. We are authorised to hand over your data if higher authorities request it.
+Any violation of the terms may get your account terminated.
+Content Policy (seperate page)
+Our content policy includes the following.
+    1. Must not be inappropriate.
+    2. Must not include highly controversial topics.
+    3. Must be in the correct category.
+    4. Must not include media bullying others
+    5. Must not be ip adresses (send that to lemion@zohomail.com pls)
+Any violation of the content policy will result in a warning.
+An excessive amount of warnings (3 to 5, depending on the level) will result in termination.

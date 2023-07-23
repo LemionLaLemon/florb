@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--CSS-->
+<link rel="stylesheet" href="index.css">
+<!--Fonts-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap">
+<html lang="en">
+    <head>
+        <title>Florb</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <meta name="initial-scale">
+    </head>
+    <body>
+            <div id="name">
+                <p id="title">Florb</p>
+            </div>
+            <div id="explaination">
+                <br><br><br>
+                <p id="p1" style="margin-left: 15%;">We know that you will ask.</p>
+                <center><span id="p2">What is </span><span id="florb">Florb</span><span id="p2">?</span></center>
+                <br><br><br><br>
+                <hr style="width: 30vw;">
+                <br><br><br><br>
+                <div id="p1-a">
+                    <p>And we have an answer for <strong>you.</strong></p>
+                    <!--place a screenshot of florb here-->
+                    <br><br><br><br><br>
+                    <span>Florb is a communication platform</span><br>
+                    <span>Made by <span style="color: rgb(165, 145, 145); border-bottom: 2px solid rgb(165, 145, 145);">students</span>, </span><br>
+                    <span>For <span style="color: rgb(165, 145, 145); border-bottom: 2px solid rgb(165, 145, 145);">students</span>.</span><br>
+                </div>
+                <br><br><br><br><br><br>
+                    <img src="explaination.png" id="explainationimg"/>
+                    <br><br><br><br><br><br>
+                    <div id="p10">
+                        <span>As you can see, Florb has a fun interface while still being easy to use.</span>
+                        <br><br>
+                        <span>You can now communicate your thoughts to others easily!</span>
+                    </div>
+            </div>
+            <div id="signup">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <center><p id="p3">So, what are you waiting for?</p></center>
+                <center>
+                    <button id="b1">Sign up</button>
+                    <button id="b1">Log in</button>
+                </center>
+            </div>
+    </body>
+</html>
+<script>
+   // get the element to animate
+var element = document.getElementById('p1-a');
+var elementHeight = element.clientHeight;
+
+// listen for scroll event and call animate function
+document.addEventListener('scroll', animate);
+
+// check if element is in view
+function inView() {
+  // get window height
+  var windowHeight = window.innerHeight;
+  // get number of pixels that the document is scrolled
+  var scrollY = window.scrollY || window.pageYOffset;
+  // get current scroll position (distance from the top of the page to the bottom of the current viewport)
+  var scrollPosition = scrollY + windowHeight;
+  // get element position (distance from the top of the page to the bottom of the element)
+  var elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
+  // is scroll position greater than element position? (is element in view?)
+  if (scrollPosition > elementPosition) {
+    return true;
+  }
+  return false;
+}
+
+// animate element when it is in view
+function animate() {
+  // is element in view?
+  if (inView()) {
+      // element is in view, add class to element
+      element.classList.add('animate');
+  }
+}
+</script>
+<style>
+    .animate {
+    animation: animate 2s forwards;
+}
+@keyframes animate {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#p2{
+    margin: 0;
+    margin-left: 5%;
+    color: white;
+    font-size: 45px;
+    margin-left: 0;
+}
+</style>

@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "/public",
+    "site": "florb",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

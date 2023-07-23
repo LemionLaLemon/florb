@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--CSS-->
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="app.css">
+<!--Fonts-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap">
+<html lang="en">
+    <head>
+        <title>Florb</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <meta name="initial-scale">
+    </head>
+    <body>
+        <br>
+        <div id="topstuffs">
+            <div id="ts1">
+                <p style="margin-left: 10px;">Popular Topics</p>
+                <hr>
+                <div id="populartopics">
+                <!--Generate using firebase based on the amount of capybaras a post has-->
+                    <p style="margin-left: 10px; border-bottom: 2px solid rgb(146, 196, 110); width:fit-content; cursor: pointer;">#shitpost</p>
+                    <p style="margin-left: 10px; border-bottom: 2px solid rgb(146, 196, 110); width:fit-content; cursor: pointer;">#homework</p>
+                    <p style="margin-left: 10px; border-bottom: 2px solid rgb(146, 196, 110); width:fit-content; cursor: pointer;">#math</p>
+                </div>
+            </div>
+            <div id="ts2">
+                <center><p>Create a post</p></center>
+                <hr style="width: 100%; margin-top: -1px;">
+                <p style="font-size: 12px; margin-left: 10px;">What are you thinking about?</p>
+                    <textarea placeholder="title" class="thought" rows="1" id="inputtitle"required></textarea>
+                    <textarea placeholder="Pluto is bigger than a dog"  id="inputtext" class="thought" rows="2" required></textarea>
+                    <center><label for="file">Choose Image </label>
+                    <input type="file" id="file" accept=".jpg, .jpeg, .png, .bmp, .gif, .pjpeg, .svg, .tiff, .webp, .ico" hidden/>
+                    <span id="file-chosen" style="margin-left: 10px;">*Not required</span></center>
+                    <div id="tags">
+                        <button id="addTag" onclick="handleAddTag()">+</button>
+                    </div>
+                    <center><input type="submit" class="submit" value="Post" onclick="post()"></center>
+                </div>
+            <div id="ts3">
+                <p style="margin-left: 10px;">New users</p>
+                <hr>
+                <div id="newusers">
+                    <!--Generate using firebase based on user's signup time (newest first)-->
+                    <p style="margin-left: 10px;">trashguy</p>
+                    <hr style="width: 60%;">
+                    <p style="margin-left: 10px;">dogman4123</p>
+                    <hr style="width: 60%;">
+                    <p style="margin-left: 10px;">notdum</p>
+                    <hr style="width: 60%;">
+                    <p style="margin-left: 10px;">titan</p>
+                    <hr style="width: 60%;">
+                </div>
+            </div>
+        </div>
+        <p style="font-size: 28px;"></p><!--so that the <p> on the next line will be aligned properly-->
+        <div id="posts">
+            <!--FIREBASE!-->
+        </div>
+        <main>
+            <!--Temporary UI showcase for home page-->
+            <div id="post">
+                <p id="posttitle">The post author from the post below is a dummy dum dum!</p>
+                <span id="author">-Titan <span id=tag>#shitpost</span></span><br><br>
+                <img id="capyimage" src="pluto.png" onclick="capy()" style="margin-left: 40px; width: auto; height: 1rem; margin-right: 5px;">
+                <span id="capyspan">12</span>
+            </div>
+            <div id="post">
+                <p id="posttitle">Pluto is cool, man</p>
+                <span id="author">-Titan <span id=tag>#general</span><span id=tag>#random</span></span><br>
+                <span id="posttext">like, just look at it!</span><br>
+                <span id="posttext">SOO cool.</span><br>
+                <span id="posttext">It's round and looks like a dog!</span>
+                <img src="Pluto.png" id="postimage">
+            </div>
+        </main>
+    </body>
+</html>
+<script>
+const actualBtn = document.getElementById('file');
+
+const fileChosen = document.getElementById('file-chosen');
+
+actualBtn.addEventListener('change', function(){
+  fileChosen.textContent = this.files[0].name
+})
+</script>
+<script>
+    // Function to generate a random rotation value between -2.5 and 2.5 degrees
+const getRandomRotation = () => (Math.random() * 5) - 2.5;
+const getRandomTranslate = () => (Math.random() * 5) - 5.0;
+let i = 0;
+
+// Get all elements with the class "post"
+const postElements = document.querySelectorAll("#post");
+
+// Apply random rotation to each "post" element
+postElements.forEach((post) => {
+  const rotationValue = getRandomRotation();
+  post.style.transform = `rotate(${rotationValue}deg) translate(0, ${i}vh)`
+  i += 25
+});
+
+</script>
+<!-- Include Firebase and Firestore scripts -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+<!-- Your app.js script -->
+<script src="app.js"></script>
