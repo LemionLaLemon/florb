@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--CSS-->
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/login.css">
+<!--Fonts-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap">
+<html lang="en">
+    <head>
+        <title>Florb</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <meta name="initial-scale">
+    </head>
+    <body>
+        <br>
+        <br>
+        <center><h1 id="h1-1">Log in</h1></center>
+        <br>
+        <span id="h2-1">The username you chose</span>
+        <br>
+        <input type="text" id="usernamein" maxlength="35" autocomplete="off">
+        <br>
+        <br>
+        <span id="h2-1">Your secret code (password)</span>
+        <br>
+        <input type="text" id="passwordin" autocomplete="off">
+        <button id="bt-1" onclick="toggleFog()">Remove fog</button><br>
+        <button id="submit" onclick="login()">Enter app</button>
+        <br><br>
+        <div id="thing">
+            <span style="margin-right: 1em;">you don't have an account? </span>
+            <a href="signup.html" style="color: rgb(0, 0, 184);">Click me</a>
+        </div>
+    </body>
+</html>
+<script>
+    const passwordInput = document.getElementById('passwordin');
+    const buttonSpan = document.getElementById('bt-1');
+    let blurOn = true;
+
+function toggleFog(){
+  event.preventDefault();
+  blurOn = !blurOn; // Toggle the blurOn flag
+  passwordInput.style.filter = blurOn ? 'blur(2.5px)' : 'blur(0px)';
+  buttonSpan.textContent = blurOn ? 'Remove fog' : 'Add fog';
+}
+</script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+<script src="login.js"></script>

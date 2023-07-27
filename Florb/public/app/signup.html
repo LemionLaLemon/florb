@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--CSS-->
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/signup.css"
 <!--Fonts-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap">
@@ -10,4 +11,77 @@
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         <meta name="initial-scale">
     </head>
+    <body>
+        <br>
+        <br>
+        <center><h1 id="h1-1">Make-an-account station</h1></center>
+        <br>
+        <span id="h2-1">Choose a nice username</span>
+        <br>
+        <input type="text" id="usernamein" maxlength="35" autocomplete="off">
+        <span id="charCount">35 characters left</span>
+        <br>
+        <br>
+        <span id="h2-1">Type out a secret code to access your account (password)</span>
+        <br>
+        <input type="text" id="passwordin" autocomplete="off">
+        <button id="bt-1" onclick="toggleFog()">Remove fog</button><br>
+        <button id="submit" onclick="showpolicy()">Create</button>
+        <br><br>
+        <div id="thing">
+            <span style="margin-right: 1em;">you have an account already? </span>
+            <a href="login.html" style="color: rgb(0, 0, 184);">Click me</a>
+        </div>
+    </body>
+    <dialog id="policy">
+        <pre style="margin-bottom: 0px;">
+        When signing up to Florb and its extended services, you must agree to the following terms.
+            1. Accounts may be terminated anytime.
+            2. Passwords are secure. They will not be shared to third parties just asking for it.
+            3. Any user-generated data will be stored.
+            4. We have the right to delete posts that we beleive are inappropriate for the platform.
+            5. Your account may be acessed any time.
+            6. Anything could be deleted if we beleive that you are violating our content policy.
+            7. Any information you have generated may be used against you in arguments.
+            8. We are authorised to hand over your data if higher authorities request it.
+        Any violation of the terms may get your account terminated.
+        </pre>
+        <a href="policies.html" style="border: none;"><span style="border: none;">Content Policy</span></a>
+        <br>
+        <form method="dialog">
+            <br>
+            <button id="denyBtn" value="cancel" formmethod="dialog" onclick="policy(false)">Cancel</button>
+            <button id="confirmBtn" value="default" onclick="policy(true)">Confirm</button>
+        </form>
+    </dialog>
 </html>
+<script>
+    const textInput = document.getElementById('usernamein');
+    const charCountSpan = document.getElementById('charCount');
+    const maxCharLimit = 35;
+
+    textInput.addEventListener('input', updateCharCount);
+
+function updateCharCount() {
+  const currentCharCount = textInput.value.length;
+  const charRemaining = maxCharLimit - currentCharCount;
+
+  charCountSpan.textContent = `${charRemaining} characters left`;
+}
+</script>
+<script>
+    const passwordInput = document.getElementById('passwordin');
+    const buttonSpan = document.getElementById('bt-1');
+    let blurOn = true;
+
+function toggleFog(){
+  event.preventDefault();
+  blurOn = !blurOn; // Toggle the blurOn flag
+  passwordInput.style.filter = blurOn ? 'blur(2.5px)' : 'blur(0px)';
+  buttonSpan.textContent = blurOn ? 'Remove fog' : 'Add fog';
+}
+</script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+<script src="signup.js"></script>

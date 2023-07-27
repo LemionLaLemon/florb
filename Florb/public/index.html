@@ -26,8 +26,8 @@
                     <!--place a screenshot of florb here-->
                     <br><br><br><br><br>
                     <span>Florb is a communication platform</span><br>
-                    <span>Made by <span style="color: rgb(165, 145, 145); border-bottom: 2px solid rgb(165, 145, 145);">students</span>, </span><br>
-                    <span>For <span style="color: rgb(165, 145, 145); border-bottom: 2px solid rgb(165, 145, 145);">students</span>.</span><br>
+                    <span>Made by <span style="color: rgb(165, 145, 145); border-bottom: 2px solid rgb(165, 145, 145);">an idiot</span>, </span><br>
+                    <span>For <span style="color: rgb(165, 145, 145); border-bottom: 2px solid rgb(165, 145, 145);">smart people</span>.</span><br>
                 </div>
                 <br><br><br><br><br><br>
                     <img src="explaination.png" id="explainationimg"/>
@@ -42,12 +42,20 @@
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <center><p id="p3">So, what are you waiting for?</p></center>
                 <center>
-                    <button id="b1">Sign up</button>
-                    <button id="b1">Log in</button>
+                    <button id="b1" onclick="rSU()">Sign up</button>
+                    <button id="b1" onclick="rLI()">Log in</button>
                 </center>
             </div>
     </body>
 </html>
+<script>
+    function rSU(){
+        window.location.replace("./app/signup.html");
+    }
+    function rLI(){
+        window.location.replace("./app/login.html");
+    }
+</script>
 <script>
    // get the element to animate
 var element = document.getElementById('p1-a');
@@ -102,3 +110,25 @@ function animate() {
     margin-left: 0;
 }
 </style>
+<script>
+    function checkAndSetUsernameCookie() {
+  const cookies = document.cookie.split('; ');
+  let usernameCookieExists = false;
+
+  for (const cookie of cookies) {
+    const [name, value] = cookie.split('=');
+    if (name === 'username') {
+      usernameCookieExists = true;
+      break;
+    }
+  }
+
+  if (!usernameCookieExists) {
+    // Set the "username" cookie to an empty string
+    document.cookie = 'username=';
+  }
+}
+
+// Call the function to check and set the "username" cookie
+checkAndSetUsernameCookie();
+</script>

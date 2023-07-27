@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="a" width="40" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(90)">
+      <path fill="#F8F4F4" d="M0 0h40v30H0z"/>
+      <path fill="#0a79ac" d="M12 0h3v30h-3z"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#a)"/>
+</svg>

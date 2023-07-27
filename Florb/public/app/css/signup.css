@@ -1,0 +1,96 @@
+body {
+    background: repeating-linear-gradient(#eeee7d, #eeee7d 25px, #0a79ac 26px, #0a79ac 28px); /* Notebook background */
+    height: fit-content;
+    position: relative;
+    padding-bottom: 20vh;
+    height: 100vh;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 7%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: red;
+    z-index: 0;
+}
+:root{
+    overflow: hidden;
+}
+#h2-1{
+    margin-left: 10vw;
+    font-size: 18px;
+}
+#usernamein{
+    margin-left: 10vw;
+    width: 14.5em;
+    margin-top: 1px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    background-color: rgb(90, 147, 218);
+    border: 1.5px solid black;
+    border-radius: 5px;
+}
+#passwordin{
+    margin-left: 10vw;
+    width: 14.5em;
+    margin-top: 1px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    background-color: rgb(90, 147, 218);
+    border: 1.5px solid black;
+    border-radius: 5px;
+    filter: blur(2.5px);
+}
+#bt-1{
+    background-color: rgb(90, 147, 218);
+    border: 1.5px solid black;
+    border-radius: 5px;
+    width: 6rem;
+}
+#bt-1:hover{
+    background-color: rgb(84, 138, 205);
+    border: 1.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#submit{
+    background-color: rgb(90, 147, 218);
+    border: 1.5px solid black;
+    border-radius: 5px;
+    width: 6rem;
+    margin-left: 10vw;
+    margin-top: 8px;
+}
+#submit:hover{
+    background-color: rgb(84, 139, 206);
+    border: 1.5px solid black;
+    border-radius: 5px;
+    width: 6rem;
+    margin-left: 10vw;
+    margin-top: 8px;
+    cursor: pointer;
+}
+#thing{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10em;
+    width: fit-content;
+}
+#policy{
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: whitish grey;
+}
+#denyBtn{
+	background-color: rgb(84, 139, 206);
+    border: 1.5px solid black;
+   	border-radius: 5px;
+}
+#confirmBtn{
+	background-color: rgb(84, 139, 206);
+    border: 1.5px solid black;
+    border-radius: 5px;
+}
