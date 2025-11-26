@@ -1,11 +1,4 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAmIklkvQizta3qinqaXYIImYz_3yIQaCM",
-    authDomain: "florb-6eb74.firebaseapp.com",
-    projectId: "florb-6eb74",
-    storageBucket: "florb-6eb74.appspot.com",
-    messagingSenderId: "413728580900",
-    appId: "1:413728580900:web:107434e2336ce858b8bfb1",
-    measurementId: "G-31P0FQX4DD"
   };
   firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
